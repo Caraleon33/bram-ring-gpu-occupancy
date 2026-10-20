@@ -94,7 +94,7 @@ typedef unsigned int u32; typedef unsigned long long u64;
     (v) = ng & wmask;                                                            \
 }
 
-extern "C" __global__ void __launch_bounds__(B, 2) ring_mine(
+extern "C" __global__ void __launch_bounds__(B, 1) ring_mine(
     u64 base, u32* __restrict__ out_fold, u32* __restrict__ out_state,
     const unsigned short* __restrict__ RULE, const unsigned short* __restrict__ TIDX,
     const unsigned char* __restrict__ TSH,  const unsigned char* __restrict__ ADDRBIT,
